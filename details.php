@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +11,7 @@
 </head>
 
 <body>
-<?php
+    <?php
 
 include("./header.php");
 
@@ -55,46 +54,49 @@ $row_w=mysqli_fetch_array($run_w);
             </div>
         </div>
 
- 
+
         <div class="single-pro-details">
             <h2><?php echo $productname ?></h2>
             <h4> <?php echo $catagori ?></h4>
             <h3><?php echo $price ?> BDT</h3>
-     <form action="details.php?prodetails=<?php echo $proid; ?>" method="post" enctype="multipart/form-data">
-           <?php  if(isset($_SESSION["email"])){  ?>
-            <select id="name" name="size" >
-                <option value="">Select Size</option>
-                <option value="Default">Default</option>
-                <option value="XL">XL</option>
-                <option value="XLL">XXL</option>
-                <option value="Small">Small</option>
-                <option value="Large">Large</option>
-                <option value="Baby">Baby</option>
-            </select>
-            <input type="Number" name="countpro" id="count" value="1">
-            <button type="submit" name="btn1" class="normal">Buy Now</button>
-            <?php }  ?>
+            <form action="details.php?prodetails=<?php echo $proid; ?>" method="post" enctype="multipart/form-data">
+                <?php  if(isset($_SESSION["email"])){  ?>
+                <select id="name" name="size">
+                    <option value="">Select Size</option>
+                    <option value="Default">Default</option>
+                    <option value="XL">XL</option>
+                    <option value="XLL">XXL</option>
+                    <option value="Small">Small</option>
+                    <option value="Large">Large</option>
+                    <option value="Baby">Baby</option>
+                </select>
+                <input type="Number" name="countpro" id="count" value="1">
+                <button type="submit" name="btn1" class="normal">Buy Now</button>
+                <button type="submit" name="btn2" class="normal" style="margin-top:30px;>Order Drone Delivary</button>
+                <?php }  ?>
 
 
-     <?php  if(!isset($_SESSION["email"])){  ?>
-        
-            <select id="name" name="size" >
-                <option value="">Select Size</option>
-                <option value="Default">Default</option>
-                <option value="XL">XL</option>
-                <option value="XLL">XXL</option>
-                <option value="Small">Small</option>
-                <option value="Large">Large</option>
-                <option value="Baby">Baby</option>
-            </select>
-            <input type="Number" name="countpro" id="count" value="1" required>
-             <input type="text" name="name" id="normal" placeholder="Enter name" required>
-            <input type="text" name="number" id="normal" placeholder="Enter Phone Number" required> 
-            <button type="submit" name="btn2" class="normal">Order Now</button>
+                <?php  if(!isset($_SESSION["email"])){  ?>
+
+                <select id=" name" name="size">
+                    <option value="">Select Size</option>
+                    <option value="Default">Default</option>
+                    <option value="XL">XL</option>
+                    <option value="XLL">XXL</option>
+                    <option value="Small">Small</option>
+                    <option value="Large">Large</option>
+                    <option value="Baby">Baby</option>
+                    </select>
+                    <input type="Number" name="countpro" id="count" value="1" required>
+                    <input type="text" name="name" id="normal" placeholder="Enter name" required>
+                    <input type="text" name="number" id="normal" placeholder="Enter Phone Number" required>
+                    <button type="submit" name="btn2" class="normal">Order Cash On Delivary</button>
+                    <button type="submit" name="btn2" class="normal" style="margin-top:30px;">Order Drone
+                        Delivary</button>
             </form>
             <?php }  ?>
 
-<?php
+            <?php
 
     if(isset($_POST['btn1']))
     {
@@ -117,8 +119,8 @@ $row_w=mysqli_fetch_array($run_w);
     }
     
     ?>
-    
-           
+
+
             <h4>Product Details</h4>
             <span>
                 <pre>
@@ -131,12 +133,12 @@ $row_w=mysqli_fetch_array($run_w);
 
 
 
-    
+
     <section id="product1" class="section-p1">
         <h2> New ArriVal</h2>
         <p>Summer Collection New Morden Design</p>
         <div class="pro-containar">
-        <?php
+            <?php
        
 
        $get_w = "SELECT * FROM product order by RAND()LIMIT 0,50";
@@ -297,20 +299,20 @@ $row_w=mysqli_fetch_array($run_w);
         <p> @2002 Teach -javascript Tamplate</p>
     </div>
     <script>
-        var MainImg = document.getElementById("MainImg");
-        var smallimg = document.getElementsByClassName("small-img");
-        smallimg[0].onclick = function() {
-            MainImg.src = smallimg[0].src;
-        }
-        smallimg[1].onclick = function() {
-            MainImg.src = smallimg[1].src;
-        }
-        smallimg[2].onclick = function() {
-            MainImg.src = smallimg[2].src;
-        }
-        smallimg[3].onclick = function() {
-            MainImg.src = smallimg[3].src;
-        }
+    var MainImg = document.getElementById("MainImg");
+    var smallimg = document.getElementsByClassName("small-img");
+    smallimg[0].onclick = function() {
+        MainImg.src = smallimg[0].src;
+    }
+    smallimg[1].onclick = function() {
+        MainImg.src = smallimg[1].src;
+    }
+    smallimg[2].onclick = function() {
+        MainImg.src = smallimg[2].src;
+    }
+    smallimg[3].onclick = function() {
+        MainImg.src = smallimg[3].src;
+    }
     </script>
 
 
@@ -318,6 +320,3 @@ $row_w=mysqli_fetch_array($run_w);
 </body>
 
 </html>
-
-
-
